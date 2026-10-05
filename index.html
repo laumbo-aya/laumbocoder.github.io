@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Customer feedback form sample" />
+    <title>Customer Feedback</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="feedback-card" aria-labelledby="form-title">
+        <header class="form-header">
+          <p class="eyebrow">YOUR VOICE MATTERS</p>
+          <h1 id="form-title">How was your experience?</h1>
+          <p>Tell us what went well and where we can improve. It only takes a minute.</p>
+        </header>
+
+        <form id="feedback-form" action="#" method="post">
+          <div class="field-grid">
+            <div class="field-group">
+              <label for="name">Full name <span aria-hidden="true">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+            </div>
+            <div class="field-group">
+              <label for="email">Email address <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <fieldset class="rating-group">
+            <legend>Overall satisfaction <span aria-hidden="true">*</span></legend>
+            <div class="rating-options">
+              <label><input type="radio" name="rating" value="1" required /><span>1</span><small>Poor</small></label>
+              <label><input type="radio" name="rating" value="2" /><span>2</span><small>Fair</small></label>
+              <label><input type="radio" name="rating" value="3" /><span>3</span><small>Good</small></label>
+              <label><input type="radio" name="rating" value="4" /><span>4</span><small>Very good</small></label>
+              <label><input type="radio" name="rating" value="5" /><span>5</span><small>Excellent</small></label>
+            </div>
+          </fieldset>
+
+          <div class="field-group">
+            <label for="topic">What would you like to comment on?</label>
+            <select id="topic" name="topic">
+              <option value="">Choose a topic</option>
+              <option>Product or service quality</option>
+              <option>Customer support</option>
+              <option>Delivery or turnaround time</option>
+              <option>Website or application</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="feedback">Your feedback <span aria-hidden="true">*</span></label>
+            <textarea id="feedback" name="feedback" rows="5" placeholder="Please share your experience..." required></textarea>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" name="contact_permission" />
+            <span>It is okay to contact me about my feedback.</span>
+          </label>
+
+          <button type="submit">Send feedback</button>
+          <p class="privacy-note">We use your feedback to improve our products and services.</p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
